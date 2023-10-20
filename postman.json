@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "4abf87f6-9e32-43d8-aaf8-469a2381d99f",
+		"name": "MS-Sentinel-Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Block user in Azure AD",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accountEnabled\":\"false\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graph.microsoft.com/v1.0/users/AdeleV@ml04.onmicrosoft.com",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"v1.0",
+						"users",
+						"AdeleV@ml04.onmicrosoft.com"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://login.microsoftonline.com/<<tenant-id>>/oauth2/v2.0/token",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "ms-graph-api-token",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "https://graph.microsoft.com/.default",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
